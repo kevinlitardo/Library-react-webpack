@@ -14,7 +14,7 @@ export const BookProvider = (props) => {
     setBooks([
       {
         title: "New Horizon",
-        image: "s-1.jpg",
+        image: "s1.jpg",
         rating: 4,
         classification: "Cyberpunk",
         id: uuidv4(),
@@ -22,7 +22,7 @@ export const BookProvider = (props) => {
       },
       {
         title: "Titans Fury",
-        image: "s-2.jpg ",
+        image: "s2.jpg ",
         rating: 3,
         classification: "Horror",
         id: uuidv4(),
@@ -30,7 +30,7 @@ export const BookProvider = (props) => {
       },
       {
         title: "  Abandoned Souls",
-        image: "s-3.jpg",
+        image: "s3.jpg",
         rating: 5,
         classification: " Fantasy",
         id: uuidv4(),
@@ -38,7 +38,7 @@ export const BookProvider = (props) => {
       },
       {
         title: "  Losing the Empire",
-        image: "s-4.jpg",
+        image: "s4.jpg",
         rating: 4,
         classification: "Cyberpunk",
         id: uuidv4(),
@@ -46,7 +46,7 @@ export const BookProvider = (props) => {
       },
       {
         title: "In the candle image",
-        image: "s-5.jpg ",
+        image: "s5.jpg ",
         rating: 5,
         classification: "Drama",
         id: uuidv4(),
@@ -54,7 +54,7 @@ export const BookProvider = (props) => {
       },
       {
         title: "The Ia",
-        image: "s-6.jpg",
+        image: "s6.jpg",
         rating: 3,
         classification: "Horror",
         id: uuidv4(),

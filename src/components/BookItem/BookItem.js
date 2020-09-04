@@ -1,11 +1,12 @@
 import React, { useContext, useState, useEffect } from "react";
-const path = require("path");
 
 import { BookContext } from "../../contexts/BookContext";
 import { FavsContext } from "../../contexts/FavsContext";
 
 import "./BookItem.css";
 import Swal from "sweetalert2";
+
+import starsPic from "../../images/star.png";
 
 function BookItem({ image, title, rating, classification, id, favorite }) {
   const { onRemove, onUpdateRating, onUpdateFavorite } = useContext(
@@ -95,12 +96,7 @@ function BookItem({ image, title, rating, classification, id, favorite }) {
         <span>Rating:</span>
         <p>
           {stars.map((_x, index) => (
-            <img
-              src={`./images/star.png`}
-              alt="star"
-              width="20px"
-              key={index}
-            />
+            <img src={starsPic} alt="star" width="20px" key={index} />
           ))}
         </p>
         <span>Rate:</span>
