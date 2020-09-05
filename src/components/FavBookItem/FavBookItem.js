@@ -6,16 +6,43 @@ import { FavsContext } from "../../contexts/FavsContext";
 import "./FavBookItem.css";
 import Swal from "sweetalert2";
 
-function BookItem({ image, title, rating, classification, id, favorite }) {
+function BookItem({
+  image,
+  title,
+  rating,
+  classification,
+  id,
+  favorite,
+  storageName,
+}) {
   const { onUpdateFavorite } = useContext(BookContext);
   const { removeFav } = useContext(FavsContext);
   const [itemRating, setItemRating] = useState("");
   const [stars, setStars] = useState([]);
 
+  const [srcImage, setSrcImage] = useState(null);
+
   useEffect(() => {
     setItemRating(rating);
     setStars(Array(rating).fill(1));
   }, [rating]);
+
+  useEffect(() => {
+    checkImageTypeOf();
+  }, []);
+
+  const checkImageTypeOf = () => {
+    if (image !== null) {
+      if (
+        sessionStorage.getItem(storageName) &&
+        sessionStorage.getItem(storageName) === image
+      ) {
+        setSrcImage(`${image}`);
+      } else {
+        setSrcImage(`./images/${image}`);
+      }
+    }
+  };
 
   const successfullyRemoved = () => {
     Swal.fire({
@@ -40,7 +67,7 @@ function BookItem({ image, title, rating, classification, id, favorite }) {
   return (
     <div className="fav-item">
       <div className="fav-image">
-        <img src={`images/${image}`} width="100%" alt={title} />
+        <img src={srcImage} width="100%" alt={title} />
       </div>
       <div className="fav-title">
         <span>{title}</span>

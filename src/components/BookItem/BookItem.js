@@ -8,7 +8,15 @@ import Swal from "sweetalert2";
 
 import starsPic from "../../images/star.png";
 
-function BookItem({ image, title, rating, classification, id, favorite }) {
+function BookItem({
+  image,
+  title,
+  rating,
+  classification,
+  id,
+  favorite,
+  storageName,
+}) {
   const { onRemove, onUpdateRating, onUpdateFavorite } = useContext(
     BookContext
   );
@@ -17,6 +25,22 @@ function BookItem({ image, title, rating, classification, id, favorite }) {
   const [stars, setStars] = useState([]);
   const [actionsRef] = useState(React.createRef());
   const [ratingRef] = useState(React.createRef());
+
+  const [srcImage, setSrcImage] = useState(null);
+
+  const checkImageTypeOf = () => {
+    if (image !== null) {
+      if (sessionStorage.getItem(storageName)) {
+        setSrcImage(`${image}`);
+      } else {
+        setSrcImage(`./images/${image}`);
+      }
+    }
+  };
+
+  useEffect(() => {
+    checkImageTypeOf();
+  }, []);
 
   const successfullyAdded = () => {
     Swal.fire({
@@ -87,7 +111,7 @@ function BookItem({ image, title, rating, classification, id, favorite }) {
         <i className="fas fa-angle-down"></i>
       </button>
       <div className="image">
-        <img src={`./images/${image}`} width="100%" alt={title} />
+        <img src={srcImage} width="100%" alt={title} />
       </div>
       <div className="title">
         <span>{title}</span>

@@ -7,22 +7,32 @@ import "./PanelAdd.css";
 
 const modalContainer = document.getElementById("modal");
 
-export default function PanelAdd({ onCancel, hideMenu }) {
+export default function PanelAdd({ onCancel, hideMenu, hideNewItemPanel }) {
   const { onAdd } = useContext(BookContext);
 
   const [title, setTitle] = useState("");
   const [image, setImage] = useState("");
   const [classification, setClassification] = useState("");
   const [rating, setRating] = useState("");
+  const [storageName, setStorageName] = useState("");
 
   const onSubmit = (e) => {
     e.preventDefault();
-    onAdd(title, image, rating, classification);
-    onCancel();
+    onAdd(title, image, rating, classification, storageName);
+    hideNewItemPanel();
   };
 
   const onChangeTitle = (e) => setTitle(e.target.value);
-  const onChangeImage = (e) => setImage(e.target.value);
+  const onChangeImage = (e) => {
+    const reader = new FileReader();
+    const name = e.target.files[0].name;
+    reader.addEventListener("load", () => {
+      sessionStorage.setItem(name, reader.result);
+      setImage(reader.result);
+      setStorageName(name);
+    });
+    reader.readAsDataURL(e.target.files[0]);
+  };
   const onChangeClass = (e) => setClassification(e.target.value);
   const onChangeRating = (e) => {
     const rating = parseInt(e.target.value);
@@ -51,7 +61,8 @@ export default function PanelAdd({ onCancel, hideMenu }) {
             <br />
             <input
               onChange={onChangeImage}
-              type="text"
+              type="file"
+              id="image-input"
               name="image"
               className="input"
               required

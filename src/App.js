@@ -15,7 +15,11 @@ export default function App() {
   const [newItemPanel, setNewItemPanel] = useState(false);
 
   const add = () => setNewItemPanel(true);
-  const onCancel = () => setNewItemPanel(false);
+  const hideNewItemPanel = () => setNewItemPanel(false);
+  const onCancel = () => {
+    setNewItemPanel(false);
+    sessionStorage.removeItem("new-image");
+  };
 
   const showMenu = () => setMenu(true);
   const hideMenu = () => setMenu(false);
@@ -31,7 +35,11 @@ export default function App() {
             <DesktopMenu hideMenu={hideMenu} add={add} />
             {menu && <MobileMenu hideMenu={hideMenu} add={add} />}
             {newItemPanel && (
-              <PanelAdd onCancel={onCancel} hideMenu={hideMenu} />
+              <PanelAdd
+                onCancel={onCancel}
+                hideMenu={hideMenu}
+                hideNewItemPanel={hideNewItemPanel}
+              />
             )}
           </>
         </Router>

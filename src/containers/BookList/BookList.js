@@ -20,6 +20,7 @@ function BookList() {
             id={book.id}
             key={book.id}
             favorite={book.favorite}
+            storageName={book.storageName}
           />
         ))
       ) : (

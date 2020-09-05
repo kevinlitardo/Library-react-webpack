@@ -29,7 +29,7 @@ export const BookProvider = (props) => {
         favorite: false,
       },
       {
-        title: "  Abandoned Souls",
+        title: "Abandoned Souls",
         image: "s3.jpg",
         rating: 5,
         classification: " Fantasy",
@@ -37,7 +37,7 @@ export const BookProvider = (props) => {
         favorite: false,
       },
       {
-        title: "  Losing the Empire",
+        title: "Losing the Empire",
         image: "s4.jpg",
         rating: 4,
         classification: "Cyberpunk",
@@ -79,7 +79,7 @@ export const BookProvider = (props) => {
     );
   }, [books, classFilter]);
 
-  const onAdd = (title, image, rating, classification) => {
+  const onAdd = (title, image, rating, classification, storageName) => {
     const error = () => {
       setBooks([...books]);
     };
@@ -92,6 +92,7 @@ export const BookProvider = (props) => {
               image,
               rating,
               classification,
+              storageName,
               id: uuidv4(),
               favorite: false,
             },
