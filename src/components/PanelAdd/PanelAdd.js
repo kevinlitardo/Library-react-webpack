@@ -1,5 +1,6 @@
 import React, { useState, useContext } from "react";
 import { createPortal } from "react-dom";
+import Axios from "axios";
 
 import { BookContext } from "../../contexts/BookContext";
 
@@ -7,36 +8,52 @@ import "./PanelAdd.css";
 
 const modalContainer = document.getElementById("modal");
 
-export default function PanelAdd({ onCancel, hideMenu, hideNewItemPanel }) {
+export default function PanelAdd({ hideMenu, hideNewItemPanel }) {
   const { onAdd } = useContext(BookContext);
 
   const [title, setTitle] = useState("");
   const [image, setImage] = useState("");
   const [classification, setClassification] = useState("");
   const [rating, setRating] = useState("");
-  const [storageName, setStorageName] = useState("");
+
+  const cloudinary_url =
+    "https://api.cloudinary.com/v1_1/dy14mattw/image/upload";
+  const cloudinary_upload_preset = "l2g86ymv";
 
   const onSubmit = (e) => {
     e.preventDefault();
-    onAdd(title, image, rating, classification, storageName);
+    onAdd(title, image, rating, classification);
+    setImage("");
     hideNewItemPanel();
   };
 
   const onChangeTitle = (e) => setTitle(e.target.value);
-  const onChangeImage = (e) => {
-    const reader = new FileReader();
-    const name = e.target.files[0].name;
-    reader.addEventListener("load", () => {
-      sessionStorage.setItem(name, reader.result);
-      setImage(reader.result);
-      setStorageName(name);
+
+  const onChangeImage = async (e) => {
+    const file = e.target.files[0];
+
+    const formData = new FormData();
+    formData.append("file", file);
+    formData.append("upload_preset", cloudinary_upload_preset);
+
+    const response = await Axios.post(cloudinary_url, formData, {
+      headers: {
+        "Content-type": "multipart/form-data",
+      },
     });
-    reader.readAsDataURL(e.target.files[0]);
+
+    setImage(response.data.secure_url);
   };
+
   const onChangeClass = (e) => setClassification(e.target.value);
   const onChangeRating = (e) => {
     const rating = parseInt(e.target.value);
     setRating(rating);
+  };
+
+  const onCancel = () => {
+    setImage("");
+    hideNewItemPanel();
   };
 
   return createPortal(

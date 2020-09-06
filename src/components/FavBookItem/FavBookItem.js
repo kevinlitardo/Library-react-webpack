@@ -6,21 +6,13 @@ import { FavsContext } from "../../contexts/FavsContext";
 import "./FavBookItem.css";
 import Swal from "sweetalert2";
 
-function BookItem({
-  image,
-  title,
-  rating,
-  classification,
-  id,
-  favorite,
-  storageName,
-}) {
+function BookItem({ image, title, rating, classification, id, favorite }) {
   const { onUpdateFavorite } = useContext(BookContext);
   const { removeFav } = useContext(FavsContext);
   const [itemRating, setItemRating] = useState("");
   const [stars, setStars] = useState([]);
 
-  const [srcImage, setSrcImage] = useState(null);
+  const [srcImage, setSrcImage] = useState("");
 
   useEffect(() => {
     setItemRating(rating);
@@ -32,15 +24,10 @@ function BookItem({
   }, []);
 
   const checkImageTypeOf = () => {
-    if (image !== null) {
-      if (
-        sessionStorage.getItem(storageName) &&
-        sessionStorage.getItem(storageName) === image
-      ) {
-        setSrcImage(`${image}`);
-      } else {
-        setSrcImage(`./images/${image}`);
-      }
+    if (image.includes("/")) {
+      setSrcImage(`${image}`);
+    } else {
+      setSrcImage(`./images/${image}`);
     }
   };
 

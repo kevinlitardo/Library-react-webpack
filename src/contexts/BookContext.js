@@ -69,6 +69,7 @@ export const BookProvider = (props) => {
         book.title.toLowerCase().includes(keyword.toLowerCase())
       )
     );
+    console.log(books);
   }, [keyword, books]);
 
   useEffect(() => {
@@ -79,7 +80,7 @@ export const BookProvider = (props) => {
     );
   }, [books, classFilter]);
 
-  const onAdd = (title, image, rating, classification, storageName) => {
+  const onAdd = (title, image, rating, classification) => {
     const error = () => {
       setBooks([...books]);
     };
@@ -92,7 +93,6 @@ export const BookProvider = (props) => {
               image,
               rating,
               classification,
-              storageName,
               id: uuidv4(),
               favorite: false,
             },

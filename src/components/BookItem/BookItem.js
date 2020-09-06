@@ -8,15 +8,7 @@ import Swal from "sweetalert2";
 
 import starsPic from "../../images/star.png";
 
-function BookItem({
-  image,
-  title,
-  rating,
-  classification,
-  id,
-  favorite,
-  storageName,
-}) {
+function BookItem({ image, title, rating, classification, id, favorite }) {
   const { onRemove, onUpdateRating, onUpdateFavorite } = useContext(
     BookContext
   );
@@ -26,21 +18,19 @@ function BookItem({
   const [actionsRef] = useState(React.createRef());
   const [ratingRef] = useState(React.createRef());
 
-  const [srcImage, setSrcImage] = useState(null);
-
-  const checkImageTypeOf = () => {
-    if (image !== null) {
-      if (sessionStorage.getItem(storageName)) {
-        setSrcImage(`${image}`);
-      } else {
-        setSrcImage(`./images/${image}`);
-      }
-    }
-  };
+  const [srcImage, setSrcImage] = useState("");
 
   useEffect(() => {
     checkImageTypeOf();
-  }, []);
+  }, [image]);
+
+  const checkImageTypeOf = () => {
+    if (image.includes("/")) {
+      setSrcImage(`${image}`);
+    } else {
+      setSrcImage(`./images/${image}`);
+    }
+  };
 
   const successfullyAdded = () => {
     Swal.fire({
