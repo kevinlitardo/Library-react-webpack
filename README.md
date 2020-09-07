@@ -39,17 +39,18 @@ Create, rate, add to favorites and delete the books that you want!
 ### This project was made using 🛠️
 
 <!-- prettier-ignore -->
-  - [React](https://github.com/facebook/react) <img src='https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg' width='35px'>
-  - <a href='https://github.com/webpack/webpack'><img src='https://raw.githubusercontent.com/webpack/media/05bb13961020d58eb6c4cad1c45e3299a6b455c7/logo/logo-on-white-bg.svg' width='120px'>
-  - <a href='https://github.com/babel/babel'><img src='https://upload.wikimedia.org/wikipedia/commons/0/02/Babel_Logo.svg' width='100px'></a>
-<!-- prettier-ignore -->
+  [React](https://github.com/facebook/react) <img src='https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg' width='35px'>
+  <a href='https://github.com/webpack/webpack'><img src='https://raw.githubusercontent.com/webpack/media/05bb13961020d58eb6c4cad1c45e3299a6b455c7/logo/logo-on-white-bg.svg' width='120px'>
+  <a href='https://github.com/babel/babel'><img src='https://upload.wikimedia.org/wikipedia/commons/0/02/Babel_Logo.svg' width='100px'></a>
 
+<!-- prettier-ignore -->
 ### Made by ✒️
 
-**Ricqrdo**
+<!-- prettier-ignore -->
+  ## Ricqrdo
 
 <!-- prettier-ignore -->
-  - <a href='https://github.com/Ricqrdo'><img src='https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg' width='20px'></a>
+  - <a href='https://github.com/Ricqrdo'>Github<img src='https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg' width='20px'></a>
   - <a href='https://www.linkedin.com/in/ricqrdo/'><img src='https://upload.wikimedia.org/wikipedia/commons/0/01/LinkedIn_Logo.svg' width='80px'></a>
   - <a href='https://twitter.com/Ricqrdo__'><img src='https://upload.wikimedia.org/wikipedia/commons/5/51/Twitter_logo.svg' width='80px'></a>
 
