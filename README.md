@@ -39,7 +39,7 @@ Create, rate, add to favorites and delete the books that you want!
 ### This project was made using 🛠️
 
 <!-- prettier-ignore -->
-  <a href='https://res.cloudinary.com/dy14mattw/image/upload/v1599512719/react-brand_sacswu.png' width='110px'></a>
+  <a href='https://github.com/facebook/react'><img src='https://mpng.subpng.com/20180820/pql/kisspng-react-logo-redux-webpack-babel--5b7b7258327b51.9184659615348168562068.jpg' width='110px'></a>
   <a href='https://github.com/webpack/webpack'><img src='https://raw.githubusercontent.com/webpack/media/05bb13961020d58eb6c4cad1c45e3299a6b455c7/logo/logo-on-white-bg.svg' width='135px'>
   <a href='https://github.com/babel/babel'><img src='https://upload.wikimedia.org/wikipedia/commons/0/02/Babel_Logo.svg' width='100px'></a>
 
