@@ -39,7 +39,7 @@ Create, rate, add to favorites and delete the books that you want!
 ### This project was made using 🛠️
 
 <!-- prettier-ignore -->
-  <a href='https://library.kissclipart.com/20180831/afw/kissclipart-react-clipart-react-logo-babel-e8e61aad6215d2c2.jpg' width='110px'></a>
+  <a href='./src/images/react-brand.png' width='110px'></a>
   <a href='https://github.com/webpack/webpack'><img src='https://raw.githubusercontent.com/webpack/media/05bb13961020d58eb6c4cad1c45e3299a6b455c7/logo/logo-on-white-bg.svg' width='135px'>
   <a href='https://github.com/babel/babel'><img src='https://upload.wikimedia.org/wikipedia/commons/0/02/Babel_Logo.svg' width='100px'></a>
 
