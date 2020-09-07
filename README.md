@@ -52,7 +52,7 @@ Create, rate, add to favorites and delete the books that you want!
 <!-- prettier-ignore -->
   <a href='https://github.com/Ricqrdo'><img src='https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg' width='25px'></a>
   <a href='https://www.linkedin.com/in/ricqrdo/'><img src='https://upload.wikimedia.org/wikipedia/commons/0/01/LinkedIn_Logo.svg' width='80px'></a>
-  a href='https://twitter.com/Ricqrdo__'><img src='https://upload.wikimedia.org/wikipedia/commons/5/51/Twitter_logo.svg' width='80px'></a>
+  <a href='https://twitter.com/Ricqrdo__'><img src='https://upload.wikimedia.org/wikipedia/commons/5/51/Twitter_logo.svg' width='80px'></a>
 
 ## License 📜
 
