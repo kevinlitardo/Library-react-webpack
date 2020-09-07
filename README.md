@@ -12,13 +12,13 @@ Create, rate, add to favorites and delete the books that you want!
   Feel free to modify cloning the repository
 
 <!-- prettier-ignore -->
-  `git clone https://github.com/Ricqrdo/Library-react-webpack`
+  ` git clone https://github.com/Ricqrdo/Library-react-webpack `
 
 <!-- prettier-ignore -->
   Then install dependencies with
 
 <!-- prettier-ignore -->
-  `npm install`
+  ` npm install `
 
 <!-- prettier-ignore -->
 ### Scripts for development and deployment ⚙️
@@ -27,20 +27,20 @@ Create, rate, add to favorites and delete the books that you want!
   To start a development server use
 
 <!-- prettier-ignore -->
-  `npm start`
+  ` npm start `
 
 <!-- prettier-ignore -->
   And if you want to get a minified version ready to upload use
 
 <!-- prettier-ignore -->
-  `npm run build`
+  ` npm run build `
 
 <!-- prettier-ignore -->
 ### This project was made using 🛠️
 
 <!-- prettier-ignore -->
-  - [React](https://github.com/facebook/react) <img src='https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg' width='45px'>
-  - [Webpack](https://github.com/webpack/webpack)   - <a href='https://github.com/webpack/webpack'><img src='https://raw.githubusercontent.com/webpack/media/05bb13961020d58eb6c4cad1c45e3299a6b455c7/logo/logo-on-white-bg.svg' width='100px'>
+  - [React](https://github.com/facebook/react) <img src='https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg' width='35px'>
+  - <a href='https://github.com/webpack/webpack'><img src='https://raw.githubusercontent.com/webpack/media/05bb13961020d58eb6c4cad1c45e3299a6b455c7/logo/logo-on-white-bg.svg' width='120px'>
   - <a href='https://github.com/babel/babel'><img src='https://upload.wikimedia.org/wikipedia/commons/0/02/Babel_Logo.svg' width='100px'></a>
 <!-- prettier-ignore -->
 
